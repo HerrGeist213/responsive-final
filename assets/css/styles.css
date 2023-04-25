@@ -11,7 +11,7 @@
   --hue-color: 190;
 
   /* HSL color mode */
-  --first-color: hsl(var(--hue-color), 64%, 22%);
+  --first-color: #00fff6;
   --first-color-second: hsl(var(--hue-color), 64%, 22%);
   --first-color-alt: hsl(var(--hue-color), 64%, 15%);
   --title-color: hsl(var(--hue-color), 64%, 18%);
@@ -20,8 +20,10 @@
   --input-color: hsl(var(--hue-color), 24%, 97%);
   --body-color: hsl(var(--hue-color), 100%, 99%);
   --white-color: #FFF;
+  --black-color: #000;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+  --scroll-header-color: rgba(0, 0, 0, 0.5);
   --text-shadow:  rgba(26, 26, 26, 0.6);
 
   /*========== Font and typography ==========*/
@@ -194,7 +196,7 @@ input {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: rgba(0,0,0,0.5);
+  background-color: var(--scroll-header-color);
 }
 
 /*=============== NAV ===============*/
@@ -313,10 +315,17 @@ input {
   align-content: center;
   row-gap: 3rem;
 }
+ 
+.home__social-link {
+  color: var(--white-color);
+}
+ 
+.home__social-link:hover {
+  color: var(--first-color-second);
+}
 
 .home__data-subtitle, 
-.home__data-title, 
-.home__social-link, 
+.home__data-title,
 .home__info {
   color: var(--white-color);
   color: var(--white-color);
@@ -393,14 +402,14 @@ input {
 .button {
   display: inline-block;
   background-color: var(--first-color);
-  color: var(--white-color);
+  color: var(--black-color);
   padding: 1rem 2rem;
   font-weight: var(--font-semi-bold);
   transition: .3s;
 }
 
 .button:hover {
-  background-color: var(--first-color-alt);
+  background-color: #00ee9f;
 }
 
 .button--flex {
@@ -412,6 +421,7 @@ input {
 .button--link {
   background: none;
   padding: 0;
+  color: var(--white-color);
 }
 
 .button--link:hover {
@@ -681,7 +691,7 @@ input {
 
 .subscribe__title, 
 .subscribe__description {
-  color: var(--white-color);
+  color: var(--black-color);
 }
 
 .subscribe__description {
@@ -733,8 +743,12 @@ input {
 
 .footer__social {
   font-size: 1.25rem;
-  color: var(--title-color);
+  color: var(--text-color);
   margin-right: var(--mb-1-25);
+}
+
+.footer__social:hover {
+  color: var(--first-color);
 }
 
 .footer__subtitle {
@@ -897,16 +911,16 @@ input {
     background-color: var(--white-color);
   }
   .scroll-header .nav__link {
-    color: var(--text-color);
+    color: var(--white-color);
   }
   .scroll-header .active-link {
-    color: var(--title-color);
+    color: var(--white-color);
   }
   .scroll-header .active-link::before {
-    background-color: var(--title-color);
+    background-color: var(--white-color);
   }
   .scroll-header .change-theme {
-    color: var(--text-color);
+    color: var(--white-color);
   }
   .section {
     padding: 7rem 0 2rem;
@@ -957,11 +971,11 @@ input {
     width: 160px;
   }
   .subscribe__bg {
-    background: none;
+    background: var(--first-color);
     padding: 0;
   }
   .subscribe__container {
-    background-color: var(--first-color-second);
+    background-color: var(--first-color);
     padding: 3.5rem 0;
   }
   .subscribe__input {
