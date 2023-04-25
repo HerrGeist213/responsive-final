@@ -1,24 +1,29 @@
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
+/* ===================== */
+/* ===== VARIABLES ===== */
+/* ===================== */
 :root {
   --header-height: 5rem;
 
-  /*========== Colors ==========*/
-  /* Change favorite color to match images */
-  /*Currently, Green dark 190 - Green 171 - Grren Blue 200*/
+
+  /* ================== */
+  /* ===== COLORS ===== */
+  /* ================== */
   --hue-color: 190;
 
-  /* HSL color mode */
-  --first-color: #00fff6;
-  --first-color-second: hsl(var(--hue-color), 64%, 22%);
-  --first-color-alt: hsl(var(--hue-color), 64%, 15%);
+
+  /* ================= */
+  /* ===== MODES ===== */
+  /* ================= */
+
+  --first-color: #00fff7;
+  --first-color-alt: #00ee9f;
+  --home-info-bg: rgb(0, 255, 246, 0.75);
   --title-color: hsl(var(--hue-color), 64%, 18%);
   --text-color: hsl(var(--hue-color), 24%, 35%);
   --text-color-light: hsl(var(--hue-color), 8%, 60%);
   --input-color: hsl(var(--hue-color), 24%, 97%);
-  --body-color: hsl(var(--hue-color), 100%, 99%);
+  --body-color: #e4fffd;
   --white-color: #FFF;
   --black-color: #000;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
@@ -26,8 +31,12 @@
   --scroll-header-color: rgba(0, 0, 0, 0.5);
   --text-shadow:  rgba(26, 26, 26, 0.6);
 
-  /*========== Font and typography ==========*/
-  --body-font: 'Open Sans', sans-serif;
+  
+  /* ====================== */
+  /* ===== TYPOGRAPHY ===== */
+  /* ====================== */
+
+  --body-font: font-family: 'Roboto', sans-serif;
   --title-font: 'Raleway', sans-serif;
   --biggest-font-size: 2.5rem;
   --h1-font-size: 1.5rem;
@@ -37,11 +46,19 @@
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
 
-  /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
 
-  /*========== Margenes Bottom ==========*/
+  /* ======================== */
+  /* ===== FONT WEIGHTS ===== */
+  /* ======================== */
+
+  --font-medium: 400;
+  --font-semi-bold: 400;
+
+
+  /* ========================== */
+  /* ===== MARGIN BOTTOMS ===== */
+  /* ========================== */
+
   --mb-0-25: .25rem;
   --mb-0-5: .5rem;
   --mb-0-75: .75rem;
@@ -51,11 +68,18 @@
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
 
-  /*========== z index ==========*/
+
+  /* =================== */
+  /* ===== Z-INDEX ===== */
+  /* =================== */
   --z-tooltip: 10;
   --z-fixed: 100;
 
-  /*========== Hover overlay ==========*/
+
+  /* ========================= */
+  /* ===== HOVER OVERLAY ===== */
+  /* ========================= */
+
   --img-transition: .3s;
   --img-hidden: hidden;
   --img-scale: scale(1.1);
@@ -73,7 +97,11 @@
   }
 }
 
-/*========== Variables Dark theme ==========*/
+
+/* =============================== */
+/* ===== DARK THEME VARIABLES===== */
+/* =============================== */
+
 body.dark-theme {
   --first-color-second: hsl(var(--hue-color), 54%, 12%);
   --title-color: hsl(var(--hue-color), 24%, 95%);
@@ -84,7 +112,11 @@ body.dark-theme {
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
 
-/*========== Button Dark/Light ==========*/
+
+/* =============================== */
+/* ===== BUTTON DARK / LIGHT ===== */
+/* =============================== */
+
 .nav__dark {
   display: flex;
   align-items: center;
@@ -107,7 +139,12 @@ body.dark-theme {
   font-size: var(--small-font-size);
 }
 
-/*=============== BASE ===============*/
+
+/* ================ */
+/* ===== BASE ===== */
+/* ================ */
+
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -120,8 +157,7 @@ html {
 
 body {
   margin: var(--header-height) 0 0 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+  font-family: 'Roboto', sans-serif;
   background-color: var(--body-color);
   color: var(--text-color);
 }
@@ -165,7 +201,11 @@ input {
   overflow-x: hidden;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+
+/* ============================ */
+/* ===== REUSABLE CLASSES ===== */
+/* ============================ */
+
 .section {
   padding: 4.5rem 0 2.5rem;
 }
@@ -189,7 +229,11 @@ input {
   gap: 1.5rem;
 }
 
-/*=============== HEADER ===============*/
+
+/* ================== */
+/* ===== HEADER ===== */
+/* ================== */
+
 .header {
   width: 100%;
   position: fixed;
@@ -199,7 +243,11 @@ input {
   background-color: var(--scroll-header-color);
 }
 
-/*=============== NAV ===============*/
+
+/* ============== */
+/* ===== NAV===== */
+/* ============== */
+
 .nav {
   height: var(--header-height);
   display: flex;
@@ -222,6 +270,10 @@ input {
 .nav__toggle {
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.nav__toggle:hover {
+  color: var(--first-color-alt);
 }
 
 .nav__menu {
@@ -267,22 +319,28 @@ input {
   cursor: pointer;
 }
 
-/* show menu */
+
+/* SHOW MENU */
+
 .show-menu {
   right: 0;
 }
 
-/* Change background header */
+
+/* CHANGE BACKGROUND HEADER */
+
 .scroll-header {
   box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
 }
 
 .scroll-header .nav__logo,
 .scroll-header .nav__toggle {
-  color: var(--title-color);
+  color: var(--white-color);
 }
 
-/* Active link */
+
+/* ACTIVE LINK */
+
 .active-link {
   position: relative;
   color: var(--title-color);
@@ -298,7 +356,11 @@ input {
   left: 0;
 }
 
-/*=============== HOME ===============*/
+
+/* ================ */
+/* ===== HOME ===== */
+/* ================ */
+
 .home__img {
   position: absolute;
   top: 0;
@@ -321,13 +383,12 @@ input {
 }
  
 .home__social-link:hover {
-  color: var(--first-color-second);
+  color: var(--first-color-alt);
 }
 
 .home__data-subtitle, 
 .home__data-title,
 .home__info {
-  color: var(--white-color);
   color: var(--white-color);
   text-shadow: -2px -2px 0 var(--text-shadow),
   2px -2px 0 var(--text-shadow),
@@ -363,7 +424,7 @@ input {
 }
 
 .home__info {
-  background-color: var(--first-color);
+  background-color: var(--home-info-bg);
   display: flex;
   padding: 1.5rem 1rem;
   align-items: center;
@@ -398,13 +459,18 @@ input {
   transform: var(--img-scale);
 }
 
-/*=============== BUTTONS ===============*/
+
+/* =================== */
+/* ===== BUTTONS ===== */
+/* =================== */
+
 .button {
   display: inline-block;
   background-color: var(--first-color);
   color: var(--black-color);
   padding: 1rem 2rem;
   font-weight: var(--font-semi-bold);
+  border-radius: 8px;
   transition: .3s;
 }
 
@@ -428,7 +494,11 @@ input {
   background: none;
 }
 
-/*=============== ABOUT ===============*/
+
+/* ================= */
+/* ===== ABOUT ===== */
+/* ================= */
+
 .about__data {
   text-align: center;
 }
@@ -470,7 +540,11 @@ input {
   transform: var(--img-scale);
 }
 
-/*=============== DISCOVER ===============*/
+
+/* ==================== */
+/* ===== DISCOVER ===== */
+/* ==================== */
+
 .discover__card {
   position: relative;
   width: 200px;
@@ -519,7 +593,11 @@ input {
   background-image: none;
 }
 
-/*=============== EXPERIENCE ===============*/
+
+/* ====================== */
+/* ===== EXPERIENCE ===== */
+/* ====================== */
+
 .experience__container {
   row-gap: 2.5rem;
   justify-content: center;
@@ -574,7 +652,11 @@ input {
   right: 0;
 }
 
-/*=============== VIDEO ===============*/
+
+/* ================= */
+/* ===== VIDEO ===== */
+/* ================= */
+
 .video__container {
   padding-bottom: 1rem;
 }
@@ -599,7 +681,11 @@ input {
   font-size: 1.2rem;
 }
 
-/*=============== PLACES ===============*/
+
+/* ================== */
+/* ===== PLACES ===== */
+/* ================== */
+
 .place__card, .place__img {
   height: 230px;
 }
@@ -683,9 +769,13 @@ input {
   padding: .75rem 1rem;
 }
 
-/*=============== SUBSCRIBE ===============*/
+
+/* ===================== */
+/* ===== SUBSCRIBE ===== */
+/* ===================== */
+
 .subscribe__bg {
-  background-color: var(--first-color-second);
+  background-color: var(--first-color);
   padding: 2.5rem 0;
 }
 
@@ -718,7 +808,10 @@ input {
 }
 
 
-/*=============== FOOTER ===============*/
+/* =================== */
+/* ===== FOOOTER ===== */
+/* =================== */
+
 .footer__container {
   row-gap: 5rem;
 }
@@ -789,12 +882,16 @@ input {
   color: var(--text-color);
 }
 
-/*========== SCROLL UP ==========*/
+
+/* ===================== */
+/* ===== SCROLL-UP ===== */
+/* ===================== */
+
 .scrollup {
   position: fixed;
   right: 1rem;
   bottom: -20%;
-  background-color: var(--first-color);
+  background-color: var(--black-color);
   padding: .5rem;
   display: flex;
   opacity: .9;
@@ -817,7 +914,11 @@ input {
   bottom: 5rem;
 }
 
-/*=============== SCROLL BAR ===============*/
+
+/* ===================== */
+/* ===== SCROLLBAR ===== */
+/* ===================== */
+
 ::-webkit-scrollbar {
   width: .60rem;
   background-color: var(--scroll-bar-color);
@@ -831,8 +932,14 @@ input {
   background-color: var(--text-color-light);
 }
 
-/*=============== MEDIA QUERIES ===============*/
-/* For small devices */
+
+/* ========================= */
+/* ===== MEDIA QUERIES ===== */
+/* ========================= */
+
+
+/* SMALL DEVICES */
+
 @media screen and (max-width: 340px) {
   .place__container {
     grid-template-columns: max-content;
@@ -857,7 +964,9 @@ input {
   }
 }
 
-/* For medium devices */
+
+/* MEDIUM DEVICES */
+
 @media screen and (min-width: 568px) {
   .video__container {
     display: grid;
@@ -885,7 +994,7 @@ input {
     text-transform: initial;
   }
   .nav__link:hover {
-    color: var(--white-color);
+    color: var(--first-color-alt);
   }
   .nav__dark {
     position: initial;
@@ -987,7 +1096,9 @@ input {
   }
 }
 
-/* For large devices */
+
+/* LARGE DEVICES */
+
 @media screen and (min-width: 1024px) {
   .container {
     margin-left: auto;
@@ -1061,7 +1172,7 @@ input {
   }
 }
 
-/* For tall screens on mobiles y desktop*/
+/* TALL SCREENS ON MOBILE OR DESKTOP */
 @media screen and (min-height: 721px) {
   body {
     margin: 0;
