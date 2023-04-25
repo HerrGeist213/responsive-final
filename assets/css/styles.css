@@ -3,7 +3,7 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3rem;
+  --header-height: 5rem;
 
   /*========== Colors ==========*/
   /* Change favorite color to match images */
@@ -202,6 +202,10 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#logo-header {
+  height: 60px;
 }
 
 .nav__logo, .nav__toggle {
@@ -834,7 +838,7 @@ input {
     margin: 0;
   }
   .nav {
-    height: calc(var(--header-height) + 1.5rem);
+    height: calc(var(--header-height) + 1rem);
   }
   .nav__link {
     color: var(--white-color);
