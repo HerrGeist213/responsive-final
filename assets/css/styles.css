@@ -22,6 +22,7 @@
   --white-color: #FFF;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+  --text-shadow:  rgba(26, 26, 26, 0.6);
 
   /*========== Font and typography ==========*/
   --body-font: 'Open Sans', sans-serif;
@@ -193,7 +194,7 @@ input {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: transparent;
+  background-color: rgba(0,0,0,0.5);
 }
 
 /*=============== NAV ===============*/
@@ -271,7 +272,6 @@ input {
 
 /* Change background header */
 .scroll-header {
-  background-color: var(--body-color);
   box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
 }
 
@@ -319,6 +319,15 @@ input {
 .home__social-link, 
 .home__info {
   color: var(--white-color);
+  color: var(--white-color);
+  text-shadow: -2px -2px 0 var(--text-shadow),
+  2px -2px 0 var(--text-shadow),
+  -2px 2px 0 var(--text-shadow),
+  2px 2px 0 var(--text-shadow),
+  -3px 0 0 var(--text-shadow),
+  3px 0 0 var(--text-shadow),
+  0 -3px 0 var(--text-shadow),
+  0 3px 0 var(--text-shadow);
 }
 
 .home__data-subtitle {
@@ -467,6 +476,14 @@ input {
 .discover__title, 
 .discover__description {
   color: var(--white-color);
+  text-shadow: -2px -2px 0 var(--text-shadow),
+  2px -2px 0 var(--text-shadow),
+  -2px 2px 0 var(--text-shadow),
+  2px 2px 0 var(--text-shadow),
+  -3px 0 0 var(--text-shadow),
+  3px 0 0 var(--text-shadow),
+  0 -3px 0 var(--text-shadow),
+  0 3px 0 var(--text-shadow);
 }
 
 .discover__title {
@@ -595,8 +612,17 @@ input {
   transition: var(--img-transition);
 }
 
+
 .place__content, .place__title {
   color: var(--white-color);
+  text-shadow: -2px -2px 0 var(--text-shadow),
+  2px -2px 0 var(--text-shadow),
+  -2px 2px 0 var(--text-shadow),
+  2px 2px 0 var(--text-shadow),
+  -3px 0 0 var(--text-shadow),
+  3px 0 0 var(--text-shadow),
+  0 -3px 0 var(--text-shadow),
+  0 3px 0 var(--text-shadow);
 }
 
 .place__content {
